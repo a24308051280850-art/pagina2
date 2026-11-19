@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión y Registro - Cafetería</title>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="logo.png" alt="Logo" />
+    </a>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="iniciosesion.html">Iniciar sesión / Registro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="iniciar-sesion">
+      <h2>Iniciar sesión</h2>
+      <form onsubmit="event.preventDefault(); document.getElementById('msg-login').textContent = 'Bienvenido'; this.reset();">
+        <div>
+          <label for="login-email">Correo electrónico:</label>
+          <input id="login-email" type="email" required />
+        </div>
+        <br />
+        <div>
+          <label for="login-pass">Contraseña:</label>
+          <input id="login-pass" type="password" required />
+        </div>
+        <br />
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="msg-login"></p>
+    </section>
+
+    <hr />
+
+    <section id="registro">
+      <h2>Registro</h2>
+      <form onsubmit="event.preventDefault(); document.getElementById('msg-registro').textContent = 'Gracias por registrarse'; this.reset();">
+        <div>
+          <label for="reg-name">Nombre completo:</label>
+          <input id="reg-name" type="text" required />
+        </div>
+        <br />
+        <div>
+          <label for="reg-email">Correo electrónico:</label>
+          <input id="reg-email" type="email" required />
+        </div>
+        <br />
+        <div>
+          <label for="reg-pass">Contraseña:</label>
+          <input id="reg-pass" type="password" required />
+        </div>
+        <br />
+        <button type="submit">Crear cuenta</button>
+      </form>
+      <p id="msg-registro"></p>
+    </section>
+  </main>
+
+  <hr />
+
+  <footer>
+    <p>&copy; 2026 Cafetería. Todos los derechos reservados.</p>
+    <p>Contacto: contacto@cafeteria.com | Teléfono: (656) 000-0000</p>
+    <p>
+  </footer>
+
+</body>
+</html>
